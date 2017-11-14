@@ -6,7 +6,14 @@ def soloTieneEspaciosEnBlanco(palabra):
 
     return True
 
+def rotarPalabra(palabra):
 
+    #PABLO => P-ABLO => ABLO-P => ABLOP
+
+    longitudDeLaPalabra = len(palabra)
+    palabraRotada = palabra[1:longitudDeLaPalabra] + palabra[0]
+
+    return palabraRotada
 
 def ejercicio1(palabra):
 
@@ -19,16 +26,21 @@ def ejercicio1(palabra):
     palabrasFinales = [palabra]
 
     for valor in range(len(palabra)):
-        print(valor)
 
+        if valor > 0:
+
+            indiceDeLaUltimaPalabraRotada = len(palabrasFinales) - 1
+
+            ultimaPalabraRotada = palabrasFinales[indiceDeLaUltimaPalabraRotada]
+
+            palabraRotada = rotarPalabra(ultimaPalabraRotada)
+
+            palabrasFinales.append(palabraRotada)
 
     return palabrasFinales
 
 
 
-
-
-"""
 assert (ejercicio1("") == [])
 assert (ejercicio1("     ") == [])
 assert (ejercicio1("a") == ['a'])
@@ -36,6 +48,3 @@ assert (ejercicio1("ab") == ['ab','ba'])
 assert (ejercicio1("paz") == ['paz','azp','zpa'])
 assert (ejercicio1("so l") == ['so l','o ls',' lso','lso '])
 assert (ejercicio1("rotar") == ['rotar','otarr','tarro','arrot','rrota'])
-"""
-
-#ROTAR => R-OTAR => OTAR-R => OTARR
