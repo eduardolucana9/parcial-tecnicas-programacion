@@ -15,7 +15,7 @@ def rotarPalabra(palabra):
 
     return palabraRotada
 
-def ejercicio1(palabra):
+def obtenerPalabrasRotadas(palabra):
 
     if len(palabra) == 0:
         return []
@@ -41,10 +41,9 @@ def ejercicio1(palabra):
 
 
 
-assert (ejercicio1("") == [])
-assert (ejercicio1("     ") == [])
-assert (ejercicio1("a") == ['a'])
-assert (ejercicio1("ab") == ['ab','ba'])
-assert (ejercicio1("paz") == ['paz','azp','zpa'])
-assert (ejercicio1("so l") == ['so l','o ls',' lso','lso '])
-assert (ejercicio1("rotar") == ['rotar','otarr','tarro','arrot','rrota'])
+assert (obtenerPalabrasRotadas("     ") == [])
+assert (obtenerPalabrasRotadas("a") == ['a'])
+assert (obtenerPalabrasRotadas("ab") == ['ab', 'ba'])
+assert (obtenerPalabrasRotadas("paz") == ['paz', 'azp', 'zpa'])
+assert (obtenerPalabrasRotadas("so l") == ['so l', 'o ls', ' lso', 'lso '])
+assert (obtenerPalabrasRotadas("rotar") == ['rotar', 'otarr', 'tarro', 'arrot', 'rrota'])
