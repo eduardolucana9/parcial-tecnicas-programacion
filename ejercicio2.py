@@ -1,38 +1,41 @@
 mapa = ["b.b..","b...b",".....","....b"]
 
+def siguiente(mapaDelJuego,pocicion):
 
-def life_siguiente(vida,posicion):
     siguiente = []
 
-    for i in range(len(vida)):
+    for f in range(len(mapaDelJuego)):
 
         fila = []
 
-        for c in range(len(vida[0])):
+        for c in range(len(mapaDelJuego[0])):
 
-            fila.append(celda_siguiente(vida,i,c,posicion))
+            fila.append(disparo(mapaDelJuego,f,c,pocicion))
 
         siguiente.append(fila)
 
-
     return siguiente
 
-def celda_siguiente(life,f,c,posicion):
+
+
+def disparo(mapaDelJuego,f,c,posicion):
 
     for x in range(len(posicion)):
 
-        fi=(posicion[x][0])-1
+        fila = (posicion[x][0])-1
 
-        co=(posicion[x][1])-1
+        columna = (posicion[x][1])-1
 
-        if f == fi and c == co:
+        if f == fila and c == columna:
 
             return '.'
 
-    return life[f][c]
+
+    return mapaDelJuego[f][c]
 
 
-def botesHundidos(mapa,posicionesDeDisparosDePrueba):
+
+def posicionesDeBarcosNoHundidos(mapa, posicionesDeDisparosDePrueba):
 
     list = []
 
@@ -44,39 +47,38 @@ def botesHundidos(mapa,posicionesDeDisparosDePrueba):
 
     lista = []
 
-    lista = life_siguiente(mapa,posicionesDeDisparosDePrueba)
+    lista = siguiente(mapa,posicionesDeDisparosDePrueba)
 
-    disparo = []
+    posicionesDeBarcosVivos = []
 
     for f in range(len(lista)):
-        li = ()
 
-        for z in range(len(lista[0])):
+        lista1 = ()
 
-            if lista[f][z]== 'b':
+        for c in range(len(lista[0])):
 
-                li = (f+1,z+1)
+            if lista[f][c] == 'b':
 
-            if li != [] and len(li) == 2:
+                lista1 = (f+1,c+1)
 
-                disparo.append(li)
-                li = []
-    return disparo
+            if lista1 != [] and len(lista1) == 2:
 
+                posicionesDeBarcosVivos.append (lista1)
 
-
+                lista1 = []
 
 
-def ejercicio2(var1,var2):
-    return botesHundidos(var1,var2)
+    return posicionesDeBarcosVivos
+
+
 
 posicionesDeDisparosDePrueba = [(1,1),(3,4),(1,3),(4,5)]
 
-assert (ejercicio2([],posicionesDeDisparosDePrueba) == [])
-assert (ejercicio2([""],posicionesDeDisparosDePrueba) == [])
-assert (ejercicio2(["      "],posicionesDeDisparosDePrueba) == [])
-assert (ejercicio2(["soy NO valido"],posicionesDeDisparosDePrueba) == [])
-assert (ejercicio2(["yo","tambien","soy","invalido"],posicionesDeDisparosDePrueba) == [])
-assert (ejercicio2(["b.b.","....","..bb","b.b"],posicionesDeDisparosDePrueba) == [])
-assert (ejercicio2(["b.b..","b...b",".....","....b"],posicionesDeDisparosDePrueba) == [(2,1),(2,5)])
-assert (ejercicio2(["b..","...","..b"],[]) == [(1,1),(3,3)])
+assert (posicionesDeBarcosNoHundidos([],posicionesDeDisparosDePrueba) == [])
+assert (posicionesDeBarcosNoHundidos([""],posicionesDeDisparosDePrueba) == [])
+assert (posicionesDeBarcosNoHundidos(["      "],posicionesDeDisparosDePrueba) == [])
+assert (posicionesDeBarcosNoHundidos(["soy NO valido"],posicionesDeDisparosDePrueba) == [])
+assert (posicionesDeBarcosNoHundidos(["yo","tambien","soy","invalido"],posicionesDeDisparosDePrueba) == [])
+assert (posicionesDeBarcosNoHundidos(["b.b.","....","..bb","b.b"],posicionesDeDisparosDePrueba) == [])
+assert (posicionesDeBarcosNoHundidos(["b.b..","b...b",".....","....b"],posicionesDeDisparosDePrueba) == [(2,1),(2,5)])
+assert (posicionesDeBarcosNoHundidos(["b..","...","..b"],[]) == [(1,1),(3,3)])
