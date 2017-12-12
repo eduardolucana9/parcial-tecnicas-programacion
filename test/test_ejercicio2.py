@@ -3,7 +3,7 @@ import unittest
 
 class TestEjercicio2(unittest.TestCase):
 
-    def testSiRecibeUnMapaVacioDeberiaDevolverUnaListaVacia(self):
+    def testSiRecibeUnMapaVacioYConDisparosDePruebaDeberiaDevolverUnaListaVacia(self):
 
         posicionesDeDisparosDePrueba = [(1, 1), (3, 4), (1, 3), (4, 5)]
 
@@ -14,7 +14,7 @@ class TestEjercicio2(unittest.TestCase):
 
         self.assertEqual(resultado,[])
 
-    def testSirecibeUnMapaInvalidoDeberiaDevolverUnaListaDePosicionesVacia(self):
+    def testSirecibeUnMapaInvalidoYConDisparosDePruebaDeberiaDevolverUnaListaDePosicionesVacia(self):
 
         posicionesDeDisparosDePrueba = [(1, 1), (3, 4), (1, 3), (4, 5)]
 
@@ -24,7 +24,7 @@ class TestEjercicio2(unittest.TestCase):
 
         self.assertEqual(resultado, [])
 
-    def testSiRecibeUnMapaInvalidoConEspaciosDeberiaDevolverUnaListaDePosicionesVacia(self):
+    def testSiRecibeUnMapaInvalidoConEspaciosYConDisparosDePruebaDeberiaDevolverUnaListaDePosicionesVacia(self):
 
         posicionesDeDisparosDePrueba = [(1, 1), (3, 4), (1, 3), (4, 5)]
 
@@ -34,7 +34,7 @@ class TestEjercicio2(unittest.TestCase):
 
         self.assertEqual(resultado, [])
 
-    def testSiResiveUnMapaInvalidoConTresPalabrasDeberiaDevolverUnaListaDePosicionesvacia(self):
+    def testSiRecibeUnMapaInvalidoConPalabrasYConDisparosDePruebaDeberiaDevolverUnaListaDePosicionesVacia(self):
 
         posicionesDeDisparosDePrueba = [(1, 1), (3, 4), (1, 3), (4, 5)]
 
@@ -44,7 +44,7 @@ class TestEjercicio2(unittest.TestCase):
 
         self.assertEqual(resultado, [])
 
-    def testSiRecibeMapaInvalidoConPalabrasYComasEntreEllasDeberiaDevolverUnaListaDePosicionesVacia(self):
+    def testSiRecibeMapaInvalidoConVariasPalabrasYConDisparosDePruebaDeberiaDevolverUnaListaDePosicionesVacia(self):
 
         posicionesDeDisparosDePrueba = [(1, 1), (3, 4), (1, 3), (4, 5)]
 
@@ -54,7 +54,7 @@ class TestEjercicio2(unittest.TestCase):
 
         self.assertEqual(resultado, [])
 
-    def testSirecibeUnMapaConDistintasLongitudesDeCadenasDeberiaDevolverUnaListaVacia(self):
+    def testSirecibeUnMapaConDistintasLongitudesDeCadenasYConDisparosDePruebaDeberiaDevolverUnaListaVacia(self):
 
         posicionesDeDisparosDePrueba = [(1, 1), (3, 4), (1, 3), (4, 5)]
 
@@ -64,7 +64,7 @@ class TestEjercicio2(unittest.TestCase):
 
         self.assertEqual(resultado, [])
 
-    def testSiRecibeUnMapaValidoDeberiaDevolverUnaListaConLasPocicionesDeBarcosSinHundir(self):
+    def testSiRecibeUnMapaValidoConDisparosDePruebaDeberiaDevolverUnaListaConLasPocicionesDeBarcosHundidosYsinHundir(self):
 
         posicionesDeDisparosDePrueba = [(1, 1), (3, 4), (1, 3), (4, 5)]
 
@@ -74,7 +74,7 @@ class TestEjercicio2(unittest.TestCase):
 
         self.assertEqual(resultado, [(2, 1), (2, 5)])
 
-    def testSiLosTirosEstanVaciosDeberiaDevolverUnaListaConLasposicionesDeBarcosSinHundir(self):
+    def testSiRecibeUnMapaValidoYsinDisparosDePruebaDeberiaDevolverUnaListaConLasposicionesDeBarcosHundidosYsinHundir(self):
 
         posicionesDeDisparosDePrueba = []
 
