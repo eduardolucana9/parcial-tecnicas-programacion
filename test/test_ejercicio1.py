@@ -14,7 +14,7 @@ class TestEjercicio1(unittest.TestCase):
         self.assertEqual(resultado,[])
 
 
-    def testRecibirUnaPalabraVaciaDeberiaDevolverUnaListaVaciaConEspacios(self):
+    def testRecibirUnaPalabraVaciaConEspaciosDeberiaDevolverUnaListaVaciaConEspacios(self):
         # ARANGE
         palabraSoloConEspaciosEnBlanco = "     "
 
@@ -25,7 +25,7 @@ class TestEjercicio1(unittest.TestCase):
         self.assertEqual(resultado,[])
 
 
-    def testRecibirUnaPalabraDeberiaDevolverUnaListaConPalabras(self):
+    def testSiRecibeUnaLetraDeberiaDevolverUnaListaConLaLetraRotada(self):
 
         palabras = "a"
 
@@ -36,7 +36,7 @@ class TestEjercicio1(unittest.TestCase):
         self.assertEqual(resultado, ["a"])
 
 
-    def testRecibirUnaPalabraDeberiaDevolverUnaPalabraRotada(self):
+    def testsiRecibeDosLetrasDeberiaDevolverUnaListaConLasDosLetrasRotadas(self):
 
         palabras = "ab"
 
@@ -45,7 +45,7 @@ class TestEjercicio1(unittest.TestCase):
         self.assertEqual(resultado,["ab","ba"])
 
 
-    def testRecibirUnaPalabraDeberiaDevolverUnaPalabraRotada(self):
+    def testSiRecibeUnaPalabraDeberiaDevolverUnaListaConLaPalabraRotada(self):
 
         palabra = "paz"
 
@@ -54,7 +54,7 @@ class TestEjercicio1(unittest.TestCase):
         self.assertEqual(resultado,['paz', 'azp', 'zpa'])
 
 
-    def testRecibeUnaPalabraConEspaciosDeberiaDevolverUnaPalabraRotadaConEspacios(self):
+    def testSiRecibeUnaPalabraConEspacioDeberiaDevolverUnaListaConLaPalabraRotadaConEspacio(self):
 
         palabraConEspacios = "so l"
 
@@ -63,7 +63,7 @@ class TestEjercicio1(unittest.TestCase):
         self.assertEqual(resultado,['so l', 'o ls', ' lso', 'lso '])
 
 
-    def testSiRecibeUnapalabraDeberiaDevolverUnaPalabraRotada(self):
+    def testSiRecibeUnapalabraDeberiaDevolverUnaListaConPalabraRotada(self):
 
         palabra = "rotar"
 
