@@ -8,7 +8,6 @@ def soloTieneEspaciosEnBlanco(palabra):
 
 def rotarPalabra(palabra):
 
-    #PABLO => P-ABLO => ABLO-P => ABLOP
 
     longitudDeLaPalabra = len(palabra)
     palabraRotada = palabra[1:longitudDeLaPalabra] + palabra[0]
@@ -41,9 +40,3 @@ def obtenerPalabrasRotadas(palabra):
 
 
 
-assert (obtenerPalabrasRotadas("     ") == [])
-assert (obtenerPalabrasRotadas("a") == ['a'])
-assert (obtenerPalabrasRotadas("ab") == ['ab', 'ba'])
-assert (obtenerPalabrasRotadas("paz") == ['paz', 'azp', 'zpa'])
-assert (obtenerPalabrasRotadas("so l") == ['so l', 'o ls', ' lso', 'lso '])
-assert (obtenerPalabrasRotadas("rotar") == ['rotar', 'otarr', 'tarro', 'arrot', 'rrota'])
