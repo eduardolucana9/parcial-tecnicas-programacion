@@ -11,8 +11,8 @@ class TestEjercicio2(unittest.TestCase):
 
         resultado = ejercicio2.posicionesDeBarcosNoHundidos(posicionesDeDisparosDePrueba,mapa)
 
-
         self.assertEqual(resultado,[])
+
 
     def testSirecibeUnMapaInvalidoYConDisparosDePruebaDeberiaDevolverUnaListaDePosicionesVacia(self):
 
@@ -38,7 +38,7 @@ class TestEjercicio2(unittest.TestCase):
 
         posicionesDeDisparosDePrueba = [(1, 1), (3, 4), (1, 3), (4, 5)]
 
-        mapa = "no soy valido"
+        mapa = ["no soy valido"]
 
         resultado = ejercicio2.posicionesDeBarcosNoHundidos(mapa,posicionesDeDisparosDePrueba)
 
@@ -48,7 +48,7 @@ class TestEjercicio2(unittest.TestCase):
 
         posicionesDeDisparosDePrueba = [(1, 1), (3, 4), (1, 3), (4, 5)]
 
-        mapa = "yo", "tambien", "soy", "invalido"
+        mapa = ["yo", "tambien", "soy", "invalido"]
 
         resultado = ejercicio2.posicionesDeBarcosNoHundidos(mapa,posicionesDeDisparosDePrueba)
 
@@ -64,7 +64,7 @@ class TestEjercicio2(unittest.TestCase):
 
         self.assertEqual(resultado, [])
 
-    def testSiRecibeUnMapaValidoConDisparosDePruebaDeberiaDevolverUnaListaConLasPocicionesDeBarcosHundidosYsinHundir(self):
+    def testSiRecibeUnMapaValidoConDisparosDePruebaDeberiaDevolverUnaListaConLasPocicionesDeBarcosSinHundir(self):
 
         posicionesDeDisparosDePrueba = [(1, 1), (3, 4), (1, 3), (4, 5)]
 
@@ -74,7 +74,7 @@ class TestEjercicio2(unittest.TestCase):
 
         self.assertEqual(resultado, [(2, 1), (2, 5)])
 
-    def testSiRecibeUnMapaValidoYsinDisparosDePruebaDeberiaDevolverUnaListaConLasposicionesDeBarcosHundidosYsinHundir(self):
+    def testSiRecibeUnMapaValidoYsinDisparosDePruebaDeberiaDevolverUnaListaConLasposicionesDeBarcosSinHundir(self):
 
         posicionesDeDisparosDePrueba = []
 

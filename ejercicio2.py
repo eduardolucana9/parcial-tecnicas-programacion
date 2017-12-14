@@ -69,16 +69,3 @@ def posicionesDeBarcosNoHundidos(mapa, posicionesDeDisparosDePrueba):
 
 
     return posicionesDeBarcosVivos
-
-
-
-posicionesDeDisparosDePrueba = [(1,1),(3,4),(1,3),(4,5)]
-
-assert (posicionesDeBarcosNoHundidos([],posicionesDeDisparosDePrueba) == [])
-assert (posicionesDeBarcosNoHundidos([""],posicionesDeDisparosDePrueba) == [])
-assert (posicionesDeBarcosNoHundidos(["      "],posicionesDeDisparosDePrueba) == [])
-assert (posicionesDeBarcosNoHundidos(["soy NO valido"],posicionesDeDisparosDePrueba) == [])
-assert (posicionesDeBarcosNoHundidos(["yo","tambien","soy","invalido"],posicionesDeDisparosDePrueba) == [])
-assert (posicionesDeBarcosNoHundidos(["b.b.","....","..bb","b.b"],posicionesDeDisparosDePrueba) == [])
-assert (posicionesDeBarcosNoHundidos(["b.b..","b...b",".....","....b"],posicionesDeDisparosDePrueba) == [(2,1),(2,5)])
-assert (posicionesDeBarcosNoHundidos(["b..","...","..b"],[]) == [(1,1),(3,3)])
